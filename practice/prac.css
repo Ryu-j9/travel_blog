@@ -1,0 +1,58 @@
+@import url('font_vintage.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap');
+@import url('remixicon.css');
+@import url('grid.css');
+@import url('animate.min.css');
+body{
+    margin:0;
+    font-family: "Noto Sans KR", sans-serif;
+    background:url('../images/background-white-map.png') no-repeat 126px top, 
+               url('../images/background.gif') repeat-x left top;
+    color:#000;
+    font-size:15px;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+a:hover{
+    color:#555;
+}
+.serif{
+    font-family: "Noto Serif KR", serif;
+}
+.vintage{
+    font-family: 'Hey Vintage', serif;
+}
+.container{
+    width:1340px;
+}
+
+.text-center{
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.align-end{
+    align-items: flex-end;
+}
+.justify-between{
+    justify-content: space-between;
+}
+/*********   HEADER   *********/
+header{
+    padding:35px 30px 120px;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+}
+nav .snsbox{
+    margin-right:8px;
+    font-size: 20px;
+}
+
