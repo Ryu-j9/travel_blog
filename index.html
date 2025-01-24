@@ -6,7 +6,7 @@
     <title>my travel blogs</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
@@ -19,11 +19,20 @@
           </div>
           <!--메뉴-->
           <ul class="main">
-            <li><a href="#" class="act">home</a></li>
-            <li><a href="#">about me</a></li>
-            <li><a href="#">destination <i class="ri-arrow-down-s-line"></i></a></li>
-            <li><a href="#">photos</a></li>
-            <li><a href="#">work with me</a></li>
+            <li><a href="#hero" class="act">home</a></li>
+            <li><a href="#aboutme">about me</a></li>
+            <li class="p-relative"><a href="#">destination <i class="ri-arrow-down-s-line"></i></a>
+               <div class="sub">
+                  <a href="#">프랑스 파리</a>
+                  <a href="#">독일 마인츠</a>
+                  <a href="#">이태리 로마</a>
+                  <a href="#">중국 상하이</a>
+                  <a href="#">일본 오사카</a>
+               </div>
+            </li>
+            <li><a href="#video">video</a></li>
+            <li><a href="#best">best places</a></li>
+            <li><a href="#instagram">work with me</a></li>
           </ul>
           <!--search-->
           <div class="searchbox">
@@ -56,7 +65,7 @@
                   <div class="col-offset-3 col-7">
                      <img src="images/hero04.jpg" alt="h04" />
                   </div>
-                  <div class="col-offset-6 col-6 hero-card">
+                  <div class="col-offset-6 col-6 hero-card" id="aboutme">
                      <h1 class="vintage">Hello I'm Soony!</h1>
                      <p class="serif">
                         국회의원의 수는 법률로 정하되, 200인 이상으로 한다. 대한민국은 국제평화의 
@@ -113,39 +122,52 @@
       <a href="#" class="subscribe"><i class="ri-youtube-fill"></i>subscribe</a>
       <div class="vod d-flex">
          <div class="vod-box">
-            <video class="myvideo">
-               <source src="videos/001.mp4" type="video/mp4">
+            <video class="myvideo" muted>
+               <source src="vod/wave.mp4" type="video/mp4">
                웹브라우저가 video를 인식하지 못합니다. 업그레이드 하세요.
             </video>
-            <div class="myvideo-btn"></div>
+            <div class="myvideo-btn" data-vdo="wave.mp4"></div>
             <p class="text-center">text ever since the 1500s, to make</p>
            <!-- <div class="ytb-button">
             <a href="#"><img src="./images/youtube-button.png"></a>
             </div>   -->
          </div>
          <div class="vod-box">
-            <video class="myvideo">
-               <source src="videos/004.mp4" type="video/mp4">
+            <video class="myvideo" muted>
+               <source src="vod/turtle.mp4" type="video/mp4">
                웹브라우저가 video를 인식하지 못합니다. 업그레이드 하세요.
             </video>
-            <div class="myvideo-btn"></div>
+            <div class="myvideo-btn" data-vdo="turtle.mp4"></div>
             <p class="text-center">text ever since the 1500s, to make</p>
            <!-- <div class="ytb-button">
             <a href="#"><img src="./images/youtube-button.png"></a>
             </div>   -->
          </div>
          <div class="vod-box">
-            <video class="myvideo">
-               <source src="videos/003.mp4" type="video/mp4">
+            <video class="myvideo" muted>
+               <source src="vod/sea.mp4" type="video/mp4">
                웹브라우저가 video를 인식하지 못합니다. 업그레이드 하세요.
             </video>
-            <div class="myvideo-btn"></div>
+            <div class="myvideo-btn" data-vdo="sea.mp4"></div>
             <p class="text-center">text ever since the 1500s, to make</p>
            <!-- <div class="ytb-button">
             <a href="#"><img src="./images/youtube-button.png"></a>
             </div>   -->
          </div>
       </div>
+      <!-- 비디어 팝업창 -->
+      <div class="vdo-popup-back" id="vdo-back">
+         <div class="vdo-popup">
+            <video controls id="viewvideo">
+               <source src="" type="video/mp4">
+            </video>
+            <div class="close">
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+      </div>
+
     </section>
     <!--  best places   -->
 
@@ -222,7 +244,47 @@
       </div>
     </section>
     <section class="instagram" id="instagram">
-
+      <h1 class="text-center">
+         <a href="#"><i class="ri-instagram-fill"></i></a>
+      </h1>
+      <div class="insta-link">
+         <a href="#">FOLLOW ON INSTAGRAM</a>
+      </div>
+      <div class="insta-imgbox p-relative">
+         <div class="insta-back p-absolute"></div>
+         <div class="container p-relative">
+            <div class="col-offset-1 col-10 d-flex insta-img">
+               <div><img src="./images/하이델베르크성.jpg" alt="하이델베르크성"></div>
+               <div><img src="./images/라인강 계곡.jpg" alt="라인강 계곡"></div>
+               <div><img src="./images/퀼른 대성당.jpg" alt="퀼른 대성당"></div>
+               <div><img src="./images/베를린.jpg" alt="베를린"></div>
+               <div><img src="./images/드레스덴 프라우엔 교회.jpg" alt="드레스덴 프라우엔 교회"></div> 
+            </div>
+         </div>
+      </div>
     </section>
+    <footer>
+      <nav>
+         <ul class="footer-nav">
+            <li><a href="#hero">home</a></li>
+            <li><a href="#aboutme">about me</a></li>
+            <li><a href="#">destination <i class="ri-arrow-down-s-line"></i></a></li>
+            <li><a href="#video">video</a></li>
+            <li><a href="#best">best places</a></li>
+            <li><a href="#instagram" class="act">work with me</a></li>
+          </ul>
+      </nav>
+      <div class="sns-box text-center">
+         <a href><i class="ri-instagram-fill"></i></a>
+         <a href><i class="ri-kakao-talk-fill"></i></a>
+         <a href><i class="ri-twitter-x-line"></i></a>
+         <a href><i class="ri-facebook-circle-fill"></i></a>
+      </div>
+      <div class="copyright text-center">
+         <p class="text-center">
+            Copyleft &copy; Ryu's all copy Reserved.
+         </p>
+      </div>
+    </footer>
 </body>
 </html>
